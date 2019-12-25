@@ -3,7 +3,7 @@ namespace mingyuan;
 
 class test {
     public function hello() {
-        echo 11;
+        echo 112;
     }
 }
 
