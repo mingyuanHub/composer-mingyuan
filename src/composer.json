@@ -2,6 +2,5 @@
     "name":"mingyuan/mingyuan",
     "description": "its my composer",
     "require": {
-        "monolog/monolog": "1.0.*"
     }
 }
