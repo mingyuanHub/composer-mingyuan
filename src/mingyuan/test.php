@@ -1,5 +1,5 @@
 <?php
-namespace mingyuan;
+namespace Mingyuan;
 
 class test {
     public function hello() {

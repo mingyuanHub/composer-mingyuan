@@ -3,5 +3,10 @@
     "description": "its my composer",
     "require": {
         "monolog/monolog": "1.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mingyuan\\": "src/mingyuan/"
+        }
     }
 }

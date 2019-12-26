@@ -1,8 +1,4 @@
 <?php
-    require 'vendor/autoload.php';
-
-    $app = require_once __DIR__.'/app/test.php';
-
     spl_autoload_register(function($class){
    
         $class = ltrim($class, '\\');
@@ -34,25 +30,21 @@
     
     });
 
-    spl_autoload_register(function ($className) {
-        $className = ltrim($className, '\\');
-        $fileName = '';
-        if ($lastNsPos = strripos($className, '\\')) {
-            $namespace = substr($className, 0, $lastNsPos);
-            $className = substr($className, $lastNsPos + 1);
-            $fileName = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
-        }
-        $fileName = __DIR__ . DIRECTORY_SEPARATOR . $fileName . $className . '.php';
-        die($fileName);
-        if (file_exists($fileName)) {
-            require $fileName;
+    // spl_autoload_register(function ($className) {
+    //     $className = ltrim($className, '\\');
+    //     $fileName = '';
+    //     if ($lastNsPos = strripos($className, '\\')) {
+    //         $namespace = substr($className, 0, $lastNsPos);
+    //         $className = substr($className, $lastNsPos + 1);
+    //         $fileName = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
+    //     }
+    //     $fileName = __DIR__ . DIRECTORY_SEPARATOR . $fileName . $className . '.php';
+    //     die($fileName);
+    //     if (file_exists($fileName)) {
+    //         require $fileName;
     
-            return true;
-        }
+    //         return true;
+    //     }
     
-        return false;
-    });
-
-    $test = new \mingyuan\test();
-    
-    $res = $test->hello();
+    //     return false;
+    // });
